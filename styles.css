@@ -1,0 +1,185 @@
+:root {
+
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.body {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grey);
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--White);
+    height: 60vh;
+    width: 60vw;
+    margin: 0;
+    padding: 3rem;
+    border-radius: 0 0 8rem 0;
+    max-width: 800px;
+}
+
+.inputs-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-bottom: 1px solid var(--Light-grey);
+}
+
+.inputs-container h3 {
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--Smokey-grey);
+    letter-spacing: .2rem;
+    font-size: .5rem;
+    padding-bottom: .3rem;
+}
+
+.inputs {
+    width: 25%;
+}
+
+input {
+    height: 3rem;
+    width: 80%;
+    border-radius: .2rem;
+    border: 1px solid var(--Light-grey);
+    font-size: 2rem;
+    text-indent: 1rem;
+}
+
+input::placeholder {
+    font-size: 2rem;
+    text-indent: .5rem;
+}
+
+input:focus {
+    outline-color: var(--Purple)
+}
+
+.date-display {
+    display: flex;
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.divider svg {
+    font-size: 2rem;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-top: -2rem;
+    cursor: pointer;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    color: var(--Off-black);
+    font-size: clamp(3rem, 5rem, 5rem);
+    font-style: italic;
+    font-weight: 800;
+    margin-top: 1rem;
+    padding-left: .3rem;
+
+}
+
+h1 {
+    color: var(--Purple);
+    font-size: clamp(3.5rem, 5.5rem, 5.5rem);
+    font-style: italic;
+    font-weight: 800;
+}
+
+.error {
+    font-size: .8rem;
+    color: var(--Light-red);
+    font-style: italic;
+    margin-top: -1.9rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .app {
+        padding: 0rem 2rem;
+        height: 80vh;
+    }
+
+    .inputs-container {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 6rem;
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .divider svg {
+        font-size: 1.5rem;
+        padding: 0.7rem;
+    }
+
+    .divider {
+
+        justify-content: center;
+    }
+
+    .divider svg {
+        font-size: 4rem;
+        color: white;
+        background-color: black;
+        border-radius: 50%;
+        padding: 1rem;
+        margin-top: -3rem;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 4.5rem;
+
+    }
+}
